@@ -1,0 +1,41 @@
+{% extends 'food/base.html'%}
+{% block body%}
+<!--<table border="2px" cellspacing="20px" cellpadding="5px" width="400px">
+    <br>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Marks</th>
+        <th>pics</th>
+    </tr>
+    
+    <tr>
+        <td>{{ids.id}}</td>
+        <td>{{ids.name}}</td>
+        <td>{{ids.age}}</td>
+        <td>{{ids.marks}}</td>
+        <td><img src='{{ids.pics}}' width="200px" height="200px"></td>
+
+    </tr>
+</table>-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src='{{object.pics}}' width="200px" height="200px">
+        </div>
+        <div class="col-md-6">
+            <!--<h4>{{ids.id}}</h4>
+            <h4>{{ids.name}}</h4>
+            <h4>{{ids.age}}</h4>
+            <h4>{{ids.marks}}</h4>-->
+            <h4>{{object.id}}</h4>
+            <h4>{{object.name}}</h4>
+            <h4>{{object.age}}</h4>
+            <h4>{{object.marks}}</h4>
+            <a href="{% url 'new1:deletestudent' object.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+{%endblock%}
+

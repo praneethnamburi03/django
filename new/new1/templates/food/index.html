@@ -1,0 +1,40 @@
+{% extends 'food/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<body>
+    {% block body %}
+    {%for i in s%}
+    <div class="row">
+        <div class="col-md-3 offset-md-2">
+            <img class='card' src='{{i.pics}}' width="200px" height="200px">
+        </div>
+        <div class="col-md-4">
+            <h4>{{i.id}}</h4>
+            <h4>{{i.name}}</h4>
+            <h4>{{i.age}}</h4>
+            <h4>{{i.marks}}</h4>
+        </div>
+        <div class="col-md-2">
+            <a href="/new1/{{i.id}}" class="btn btn-success">details</a>
+        </div>
+    </div>
+    <br>
+
+
+
+{%endfor%}
+    {% endblock %}
+    
+</body>
+</html>
+<!--<ul>
+    <li>
+        <a href="/new1/{{i.id}}">{{i.id}}--{{i.name}}--{{i.age}}--{{i.marks}}--{{i.section}}</a>
+    </li>
+</ul>-->
